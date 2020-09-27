@@ -1,0 +1,11 @@
+Welcome to my Electrum Server!
+
+Powered by bitcoin-electrumx-docker!
+
+Bitcoin Core $DAEMON_SUBVERSION
+$SERVER_SUBVERSION
+
+Donation address: $DONATION_ADDRESS
+Thank you!
+
+Contact: ragtor@mail.de

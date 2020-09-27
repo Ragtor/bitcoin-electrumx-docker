@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+  bitcoin-core:
+    build: ./bitcoin-core
+    container_name: bitcoin-core
+    command:
+      -conf=/home/bitcoin/.bitcoin/bitcoin.conf
+    expose:
+      - "8332"
+      - "8333"
+      - "18332"
+      - "18333"
+      - "18443"
+      - "18444"
+    environment:
+      - "BITCOIN_DATA=/home/bitcoin/volume/data"
+    volumes:
+      - "./volumes/core_data:/home/bitcoin/volume"
+
+  electrumx:
+    image: lukechilds/electrumx:v1.15.0
+    container_name: electrumx
+    ports:
+      - "50002:50002"
+    environment:
+      - "COIN=BitcoinSegwit"
+      - "NET=mainnet"
+      - "DAEMON_URL=http://rpcuser:guHfrM0dvfWZDUw2sHi5f9JgsWefzuLkDVVFJ4Fn698=@bitcoin-core:18443"
+      - "BANNER_FILE=/data/banner.txt"
+      - "ANON_LOGS=foo"
+      - "DONATION_ADDRESS=3ML6FiEjS8NA7heekvJE5SfhAoEezsdK8f"
+      - "SSL_CERTFILE=/ssl_certs/server.crt"
+      - "SSL_KEYFILE=/ssl_certs/server.key"
+    volumes:
+      - "./volumes/ssl_certs:/ssl_certs"
+      - "./volumes/elx_data:/data"
+
+
