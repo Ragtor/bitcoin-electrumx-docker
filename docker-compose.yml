@@ -25,7 +25,7 @@ services:
     environment:
       - "COIN=BitcoinSegwit"
       - "NET=mainnet"
-      - "DAEMON_URL=http://rpcuser:guHfrM0dvfWZDUw2sHi5f9JgsWefzuLkDVVFJ4Fn698=@bitcoin-core:18443"
+      - "DAEMON_URL=http://rpcuser:guHfrM0dvfWZDUw2sHi5f9JgsWefzuLkDVVFJ4Fn698=@bitcoin-core:8332"
       - "BANNER_FILE=/data/banner.txt"
       - "ANON_LOGS=foo"
       - "DONATION_ADDRESS=3ML6FiEjS8NA7heekvJE5SfhAoEezsdK8f"
