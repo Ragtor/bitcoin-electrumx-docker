@@ -1,6 +1,6 @@
 Welcome to my Electrum Server!
 
-Powered by bitcoin-electrumx-docker!
+Powered by https://github.com/Ragtor/bitcoin-electrumx-docker!
 
 Bitcoin Core $DAEMON_SUBVERSION
 $SERVER_SUBVERSION
