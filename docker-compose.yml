@@ -18,7 +18,7 @@ services:
       - "./volumes/core_data:/home/bitcoin/volume"
 
   electrumx:
-    image: lukechilds/electrumx:v1.15.0
+    image: lukechilds/electrumx:v1.16.0
     container_name: electrumx
     ports:
       - "50002:50002"

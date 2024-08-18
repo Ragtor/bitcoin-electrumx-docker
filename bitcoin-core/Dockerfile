@@ -1,3 +1,3 @@
-FROM ruimarinho/bitcoin-core:0.20.1
+FROM lncm/bitcoind:v27.0
 
 COPY bitcoin.conf /home/bitcoin/.bitcoin/bitcoin.conf
