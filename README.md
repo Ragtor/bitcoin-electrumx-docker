@@ -3,7 +3,7 @@
 
 Running Bitcoin Core and Electrumx together in a docker-compose setup.
 
-It builds upon existing docker images for [bitcoin_core](https://github.com/ruimarinho/docker-bitcoin-core) and [electrumx](https://github.com/lukechilds/docker-electrumx/).
+It builds upon existing docker images for [bitcoin_core](https://github.com/lnliz/docker-bitcoind.git) and [electrumx](https://github.com/lukechilds/docker-electrumx/).
 
 ## System requirements
 
@@ -24,7 +24,11 @@ Great! Simply cloning this repository and (from its main directory) running
 ```
 docker-compose up -d
 ```
-should be enough. If you want, you can customize the donation address in `docker-compose.yml` and the `volumes/elx_data/banner.txt` file first.
+should be enough. 
+
+However, for security best practices, it is recommended to first change the `RPC_PASSWORD` and `RPC_AUTH` variables in `.env` 
+(generate your own credentials [here](https://jlopp.github.io/bitcoin-core-rpc-auth-generator/)).
+If you want, you can customize the donation address in `docker-compose.yml` and the `volumes/elx_data/banner.txt` file.
 
 To stop, run `docker-compose down`.
 All data is persisted to your hard drive. 

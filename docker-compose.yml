@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   bitcoin-core:
-    image: lncm/bitcoind:v28.0
+    image: lnliz/bitcoind:v29.0
     container_name: bitcoin-core
     command:
       -conf=/home/bitcoin/.bitcoin/bitcoin.conf
