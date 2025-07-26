@@ -5,6 +5,7 @@ services:
     container_name: bitcoin-core
     command:
       -conf=/home/bitcoin/.bitcoin/bitcoin.conf
+      -rpcauth="${RPC_AUTH}"
     expose:
       - "8332"
       - "8333"
@@ -25,7 +26,7 @@ services:
     environment:
       - "COIN=BitcoinSegwit"
       - "NET=mainnet"
-      - "DAEMON_URL=http://rpcuser:guHfrM0dvfWZDUw2sHi5f9JgsWefzuLkDVVFJ4Fn698=@bitcoin-core:8332"
+      - "DAEMON_URL=http://${RPC_USER}:${RPC_PASSWORD}=@bitcoin-core:8332"
       - "BANNER_FILE=/data/banner.txt"
       - "ANON_LOGS=foo"
       - "DONATION_ADDRESS=3ML6FiEjS8NA7heekvJE5SfhAoEezsdK8f"
